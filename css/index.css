@@ -1,0 +1,322 @@
+@import "./common/header.css";
+@import "./common/normalize.css";
+@import "./common/footer.css";
+@import "./common/fonts.css";
+html{
+    font-size: 10px;
+}
+*{
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    font-family: "formal","chi";
+}
+.banner_img{
+    width: 100%;
+}
+
+/* 最新商品 */
+.new_product{
+    width: 100%;
+    /* height: 1500px; */
+    background-color: rgba(201, 233, 212, .2);
+    margin:100px 0;
+}
+.new_product_1{
+    margin-top: 50px;
+}
+.new_product_1{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    
+}
+.photo{
+    width: 50%;
+    text-align: right;
+}
+.photo img{
+    width: 70%;
+}
+.textarea{
+    width: 40%;
+}
+.textarea span{
+    font-size: 4rem;
+}
+.new_product_2{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    /* height: 220px; */
+    background-color: rgba(201, 233, 212, .3);
+}
+.new_product_list{
+    width: 50%;
+    list-style: none;
+    display: inline-block;
+}
+.new_product_list li{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+.new_product_list li a{
+    margin: 10px 0;
+    padding-top: 7px;
+    height: 35px;
+    width: 110px;
+    text-align: center;
+    color: rgb(46, 169, 223);
+    border: 1px solid rgb(46, 169, 223);
+    transition: color 0.5s;
+}
+.new_product_list li a:hover{
+    border: 2px solid rgb(46, 169, 223);
+    color: rgb(46, 169, 223);
+}
+.txt{
+    width: 200px;
+    margin-right: 10px;
+    border-bottom: 1px solid gray;
+}
+.txt > span{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.photo_0{
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+.photo_0 span{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.photo_0 img{
+    width: 100%;
+}
+.photo_1{
+    width: 40%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+}
+.photo_1 img{
+    width: 100%;
+}
+/* custimized的部分 */
+.customized_info{
+    width: 90%;
+    margin: 150px auto 50px auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.information_1{
+    width: 50%;
+    border-bottom: 1px solid rgba(145,152,159,.5);
+    line-height: 25px;
+    padding: 20px;
+}
+.information_1 input[type="button"]{
+    margin: 10px 0;
+    height: 35px;
+    width: 110px;
+    padding: 0px 20px;
+    color: white;
+    border: 1px solid rgb(46, 169, 223);
+    background-color: rgb(46, 169, 223);
+    transition: color 0.5s;
+}
+.information_1 input[type="button"]:hover{
+    background-color: white;
+    border: 2px solid rgb(46, 169, 223);
+    color: rgb(46, 169, 223);
+}
+.information_1 > span{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.photo_cus{
+    width: 25%;
+    height:400px;
+}
+.photo_cus img{
+    width: 100%;
+}
+.information_2 p{
+    writing-mode:vertical-lr;
+}
+
+/* ABOUT US的部分 */
+.aboutus_info{
+    width: 90%;
+    margin: 50px auto 150px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.aboutus_1 p{
+    writing-mode:vertical-lr;
+}
+.photo_aboutus{
+    width: 40%;
+    height:400px;
+}
+.photo_aboutus img{
+    width: 100%;
+}
+.aboutus_2{
+    width: 50%;
+    border-bottom: 1px solid rgba(145,152,159,.5);
+    line-height: 25px;
+    padding: 20px;
+}
+.aboutus_2 > span{
+    font-size: 3rem;
+    font-weight: 900;
+}
+/* 圖片旁名言 */
+.information_2 p,.aboutus_1 p{
+    color: rgba(181, 73, 91,1);
+}
+.information_1 > p > span,.aboutus_2 > p >span{
+    font-size: 2rem;
+}
+.whereus_title{
+    text-align: center;
+    margin-bottom:30px ;
+}
+.whereus_title span{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.aboutus_map{
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+.aboutus_map iframe{
+    width: 55%;
+}
+@media(min-width: 768px)and (max-width:991px){
+    .aboutus_map iframe{
+        width: 60%;
+    }
+}
+@media(min-width: 576px)and (max-width:767px){
+    .new_product_1{
+        display: none;
+    }
+    .new_product_2{
+        display: flex;
+        align-items: center;
+    }
+    .photo_1{
+        position: static;
+        width: 50%;
+    }
+    .photo_1 img{
+        width: 100%;
+    }
+    .new_product_list{
+        width: 45%;
+    }
+    .new_product_list li > a{
+        padding: 0 20px;
+        text-align: center;
+        align-self: center;
+    }
+    .txt{
+        border:none;
+    }
+    .information_1{
+        width: 55%;
+    }
+    .photo_cus{
+        width: 40%;
+    }
+    .information_2{
+        width: 30px;
+    }
+    .aboutus_2{
+        width: 60%;
+    }    
+    .aboutus_map iframe{
+        width: 80%;
+    }
+}
+@media (max-width:575px){
+    .new_product_1{
+        display: none;
+    }
+    .new_product_2{
+        width: 100%;
+    }
+    .photo_0{
+        display: block;
+        
+    }
+    .photo_1{
+        display: none;
+    }
+    .new_product_list{
+        width: 100%;
+    }
+    .new_product_list li > a{
+        padding: 0 20px;
+        text-align: center;
+        align-self: center;
+    }
+    .txt{
+        width: 100%;
+        padding-left:30px;
+    }
+    .new_product_list li a{
+        margin-right: 30px;
+    }
+    .customized_info{
+        background-image: url("/images/custimized_bg_1.jpg");
+        height: 500px;
+        margin: 20px auto;
+    }
+    .information_1{
+        width: 90%;
+        background-color: rgba(255, 255, 255, .5);
+    }
+    .photo_cus{
+        display: none;
+    }
+    .information_2{
+        width: 30px;
+    }
+    .aboutus_info{
+        width: 90%;
+        justify-content: flex-end;
+    }
+    .photo_aboutus{
+        display: none;
+    }
+    .aboutus_2{
+        width: 90%;
+        border-bottom: 1px solid rgba(145,152,159,.5);
+        line-height: 25px;
+        padding: 20px;
+    }
+    .aboutus_2 > span{
+        font-size: 3rem;
+    }
+    .aboutus_map iframe{
+        width: 90%;
+    }
+    .aboutus_1{
+        display: none;
+    }
+    .information_2{
+        display: none;
+    }
+}

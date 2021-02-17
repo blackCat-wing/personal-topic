@@ -1,0 +1,238 @@
+@import "./common/header.css";
+@import "./common/normalize.css";
+@import "./common/footer.css";
+@import "./common/fonts.css";
+html{
+    font-size: 10px;
+}
+*{
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+.bread_crumbs{
+    margin: 20px auto 0 auto;
+    list-style: none;
+    margin-left: 20px;
+}
+.bread_crumbs li{
+    display: inline-block;
+}
+.bread_crumbs li:not(:first-child)::before{
+    content: ">";
+    margin: 0 10px;
+}
+.bread_crumbs li:not(:last-child) > a{
+    text-decoration: none;
+    color: rgb(0, 92, 223);
+}
+.title{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    font-family: "formal";
+}
+.title span{
+    font-size: 3rem;
+}
+.title p{
+    width: 90%;
+    margin: 0 auto;
+    color: rgba(145,152,159,1);
+}
+.step{
+    width: 80%;
+    margin: 40px auto;
+}
+.step > img, .step > p{
+    display: inline-block;
+    vertical-align: middle;
+}
+.step img{
+    width: 50%;
+}
+.step > p{
+    padding: 20px;
+    width: 45%;
+    line-height: 25px;
+    background-color: rgba(245, 140, 150,.1);
+    position: relative;
+    left: -16px;
+}
+.step > p span{
+    font-size: 3rem;
+}
+.step_1{
+    border-right: 1px solid rgba(145,152,159,.5);
+}
+.step_2{
+    border-left: 1px solid rgba(145,152,159,.5);
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.step_2 p{
+    position: absolute;
+    left: 20px;
+    width: 47%;
+    padding: 40px;
+}
+.step_3{
+    border-right: 1px solid rgba(145,152,159,.5);
+}
+.step_3 p{
+    padding: 30px;
+}
+.step_3 input[type="button"]{
+    margin: 10px 0;
+    height: 35px;
+    width: 110px;
+    padding: 9px 20px;
+    color: white;
+    border: 1px solid rgb(46, 169, 223);
+    background-color: rgb(46, 169, 223);
+    transition: color 0.5s;
+}
+.step_3 input[type="button"]:hover{
+    background-color: white;
+    border: 2px solid rgb(46, 169, 223);
+    color: rgb(46, 169, 223);
+}
+.main_title{
+    margin-bottom: 10px;
+}
+.maintain_area{
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+}
+.maintain_area > span{
+    font-size: 3rem;
+}
+.maintain_area{
+    line-height: 25px;
+}
+.maintain1, .maintain2{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    height: 250px;
+    margin: 0px 20px;
+    padding: 50px;
+    position: relative;
+}
+.maintain1::after, .maintain2::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(201, 233, 212, .3);
+    transform: skew(5deg);
+    z-index: -1;
+}
+@media(min-width: 768px)and (max-width:991px){
+    .step{
+        width: 80%;
+        margin: 40px auto;
+        border: 0;
+    }
+    .step > img, .step > p{
+        display: block;
+    }
+    .step img{
+        width: 100%;
+    }
+    .step > p{
+        padding: 30px;
+        width: 100%;
+        line-height: 25px;
+        background-color: rgba(245, 140, 150,.1);
+        position: static;
+    }
+    .step_2{
+        display: block;
+    }
+    .step_2 p{
+        padding: 30px;
+    }
+    .step_2 img{
+        float: none;
+    }
+    .maintain1, .maintain2{
+        width: 40%;
+        padding: 30px;
+    }
+}
+@media(min-width: 576px)and (max-width:767px){
+    .step{
+        width: 80%;
+        margin: 40px auto;
+        border: 0;
+    }
+    .step > img, .step > p{
+        display: block;
+    }
+    .step img{
+        width: 100%;
+    }
+    .step > p{
+        padding: 15px 30px 30px 30px;
+        width: 100%;
+        line-height: 25px;
+        background-color: rgba(245, 140, 150,.1);
+        position: static;
+    }
+    .step_2{
+        display: block;
+    }
+    .step_2 p{
+        padding: 30px;
+    }
+    .step_2 img{
+        float: none;
+    }
+    .maintain1, .maintain2{
+        width: 40%;
+        padding: 30px;
+    }
+}
+@media (max-width:575px){
+    .step{
+        width: 80%;
+        margin: 40px auto;
+        border: 0;
+    }
+    .step > img, .step > p{
+        display: block;
+    }
+    .step img{
+        width: 100%;
+    }
+    .step > p{
+        padding: 20px;
+        height: auto;
+        width: 100%;
+        line-height: 25px;
+        background-color: rgba(245, 140, 150,.1);
+        position: static;
+    }
+    .step_2{
+        display: block;
+    }
+    .step_2 img{
+        float: none;
+    }
+    .maintain{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 90%;
+        margin: 20px auto;
+    }
+}

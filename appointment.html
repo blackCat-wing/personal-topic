@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>預約來店 | uniques</title>
+    <link rel="stylesheet" href="./css/appointment.css">
+</head>
+<body>
+    <header class="nav_list">
+        <div class="phone_nav">
+            <a href="./index.html"><img src="./images/logo.png" alt=""></a>
+            <button class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+        </div>
+        <ul class="header_list">
+            <li><a href="./product_list.html">uniques珠寶</a></li>
+            <li><a href="./service_custimized.html">客製化</a></li>
+            <li><a href="./news.html">最新消息</a></li>
+            <li><a href="./index.html"><img src="./images/logo.png"></a></li>
+            <li class="-on"><a href="./appointment.html">預約來店</a></li>
+            <li><a href="./about_us.html">關於我們</a></li>
+            <li>
+                <a href="#"><img src="./images/login.png"></a>
+                <a href="#"><img src="./images/shopping.png"></a>
+            </li>
+        </ul>
+    </header>
+    <ol class="bread_crumbs">
+        <li><a href="./index.html">首頁</a></li> 
+        <li>預約來店</li>
+    </ol>
+    <section>
+        <div class="title">
+            <span>APPOINTMENT</span>
+            <p>對於專屬的飾品感到嚮往，立刻預約與設計師討論</p>
+        </div>
+        <div class="main_bg">
+            <form action="#" method="POST" class="form_list" id="formlist">
+                <label><span>*</span>預約門市：</label>
+                <select name="app_shop" id="app_shop">
+                    <option value="taipei" selected>台北微風廣場</option>
+                </select><br>
+                <label><span>*</span>目前考慮的商品：</label>
+                <select name="app_class" id="app_class">
+                        <option value="0">請選擇</option>
+                        <option value="1">訂婚鑽戒</option>
+                        <option value="2">結婚對戒</option>
+                        <option value="3">其他珠寶首飾</option>
+                        <option value="4">全訂製商品</option>
+                </select><br>
+                    
+                <label for="date" id="date"><span>*</span>預約日期：</label>
+                 <input type="date" id="bookdate" value="2020-08-31" min="2020-08-31" max="2020-09-14">
+                <select name="app_time" id="app_time">
+                    <option value="0">請選擇時段</option>
+                    <option value="1">12：00</option>
+                    <option value="2">13：00</option>
+                    <option value="3">14：00</option>
+                    <option value="4">15：00</option>
+                    <option value="5">16：00</option>
+                    <option value="6">17：00</option>
+                    <option value="7">18：00</option>
+                    <option value="8">19：00</option>
+                    <option value="8">20：00</option>
+                </select>
+                <br>
+                <label>預約來店人數：</label>
+                <select name="app_people" id="app_people">
+                    <option value="0">請選擇</option>
+                    <option value="1">1人</option>
+                    <option value="2">2人</option>
+                    <option value="3">3人</option>
+                    <option value="4">4人</option>
+                    <option value="3">5人</option>
+                    <option value="4">5人以上</option>
+                </select><br>
+                    
+                <label for="username"><span>*</span>姓名：</label>
+                <input type="text" name="username" id="username" required><br>
+
+                <label for="phone"><span>*</span>電話：</label>
+                <input type="text" name="phone" id="phone" required><br>
+
+                <label for="email"><span>*</span>Email：</label>
+                <input type="email" name="email" id="email" required><br>
+                
+                <label id="notes">來店有任何希望與要求，歡迎告訴我們：</label>
+                <textarea rows="7" name="notes" required></textarea><br>
+            
+                <input type="button" value="資料送出" name="資料送出">
+            </form>
+            <div class="outerdiv">
+                <div class="innerdiv">
+                    <p id="errormessage"></p>
+                    <input type="button" id="determine" value="確定">
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer_div">
+                <a href="./index.html"><img src="./images/logo.png"></a>
+                <div class="footer_service">
+                    <a href="./product_list.html">所有商品</a>
+                    <a href="./service_custimized.html">客製化</a>
+                    <a href="./appointment.html">預約來店</a>
+                </div>
+                <ul class="follow_us">
+                    <li>追蹤我們</li>
+                    <li><a href="#"><img src="./images/icon-facebook.png">faceBook</a></li>
+                    <li><a href="#"><img src="./images/icon-instagram.png">Instagram</a></li>
+                </ul>
+                <!-- <p>© uniques All Rights Reserved.</p> -->
+               
+            </div> 
+        </footer>
+    </section>
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script src="./js/rwd.js"></script>
+    <script src="./jquery/alert.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@font-face{
+    font-family: "galada";
+    src: url("../../fonts/Galada-Regular.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "chi";
+    src: url("../../fonts/NotoSansCJKtc-Light.otf");
+    font-display: swap;
+  }
+@font-face {
+    font-family: "formal";
+    src: url("../../fonts/Roboto-Light.ttf");
+    font-display: swap;
+}
+body{
+    font-family: "galada", "chi";
+    font-size: 16px;
+}

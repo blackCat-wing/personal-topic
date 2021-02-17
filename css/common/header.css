@@ -1,0 +1,142 @@
+@import url('../common/fonts.css');
+@import url('../css_animtion/hamburgers.css');
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.nav_list{
+    background-color: #fff;
+    margin: 0 auto;
+    top: 0;
+    z-index: 10;
+
+}
+@keyframes movein{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.nav_list.-on{
+    position: fixed;
+    width: 100%;
+    background: rgba(255,255,255,.9);
+    animation: movein 1s ease;
+}
+.header_list{
+    width: 90%;
+    padding: 5px 0;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+.header_list li:nth-child(4) img{
+    width: 120px;
+}
+.header_list > li:not(:nth-child(4)){
+    padding-top: 6px;
+}
+.header_list > li{
+    list-style: none;
+    color: black;
+}
+.header_list > li > a{
+    font-family: "galada", "chi";
+}
+.header_list > li:first-child:hover, .header_list > li:nth-child(2):hover{
+    color: rgb(0,92,175);
+}
+.header_list > li > a:hover{
+    color: rgb(0,92,175);
+    font-weight: 600;
+}
+.header_list li > a{
+    text-decoration: none;
+    color: black;
+}
+.header_list > li.-on a{
+    color: rgb(0,92,175);
+    font-weight: 600;
+}
+.header_list > li:last-child > a{
+    margin: 0 10px;
+}
+.header_list > li:last-child > a > img{
+    width: 23px;
+}
+.phone_nav{
+    background-color: white;
+    height: 60px;
+    position: relative;
+    display: none;
+    width: 100%;
+    justify-content: center;
+}
+.phone_nav > a> img{
+    width: 120px;
+    margin: 10px 0;
+}
+.hamburger{
+    position: absolute;
+    right: 0;
+    top: 0;
+    outline:none;
+}
+
+@media (min-width: 992px){
+    .header_list{
+      display: flex !important;
+    }
+  }
+@media(min-width: 768px)and (max-width:991px){
+    .header_list{
+        display: none;
+        text-align: center;
+    }
+    .header_list li{
+        padding: 20px 0;
+    }
+    .header_list li:nth-child(4){
+        display: none;
+    }
+    .phone_nav{
+        display: flex;
+    }
+}
+@media(min-width: 576px)and (max-width:767px){
+    .header_list{
+        display: none;
+        text-align: center;
+    }
+    .header_list li{
+        padding: 20px 0;
+    }
+    .header_list li:nth-child(4){
+        display: none;
+    }
+    .phone_nav{
+        display: flex;
+    }
+}
+@media (max-width:575px){
+    .header_list{
+        display: none;
+        text-align: center;
+    }
+    .header_list li{
+        padding: 20px 0;
+    }
+    .header_list li > a{
+        font-size: 2rem;
+    }
+    .header_list li:nth-child(4){
+        display: none;
+    }
+    .phone_nav{
+        display: flex;
+    }
+}

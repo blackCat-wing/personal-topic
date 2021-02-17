@@ -1,0 +1,305 @@
+@import "./common/header.css";
+@import "./common/normalize.css";
+@import "./common/footer.css";
+@import "./common/fonts.css";
+html{
+    font-size: 10px;
+}
+*{
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+.bread_crumbs{
+    margin: 20px auto 0 auto;
+    list-style: none;
+    margin-left: 20px;
+}
+.bread_crumbs li{
+    display: inline-block;
+}
+.bread_crumbs li:not(:first-child)::before{
+    content: ">";
+    margin: 0 10px;
+}
+.bread_crumbs li:not(:last-child) > a{
+    text-decoration: none;
+    color: rgb(0, 92, 223);
+}
+.title{
+    width: 100%;
+    text-align: center;
+    font-family: "formal";
+    margin: 20px 0;
+}
+.title span{
+    font-size: 3rem;
+}
+.shop{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+}
+.img{
+    width: 50%;
+}
+.img > img{
+    width: 100%;
+}
+.information{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+.shop_in{
+    border: 1px solid rgba(145,152,159,.5);
+    background-color: rgba(201, 233, 212, .2);
+    width: 45%;
+    height: 40%;
+    line-height: 25px;
+    margin: 5px;
+    padding-top: 10px;
+}
+.shop_in > a{
+    color: rgb(0, 92, 175);
+    transition: 0.5s;
+}
+.shop_in > a:hover{
+    color: rgb(46, 169, 223);
+}
+.shop_in > img{
+    width: 25%;
+}
+#title{
+    font-size: 2rem;
+}
+.aboutus_map{
+    width: 100%;
+    height: 250px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.aboutus_map > iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.bg{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+.bg > img{
+    width: 100%;
+}
+.inside{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+.aboutus{
+    width: 25%;
+    float: left;
+    vertical-align: middle;
+    position: relative;
+    display: flex;
+}
+.aboutus img{
+    width: 100%;
+}
+.aboutus:hover
+.txt{
+    display: block;
+}
+.txt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.7);
+    display: none;
+}
+.aboutus span{
+    padding: 7px 20px 5px 20px;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+}
+.txt p{
+    position: absolute;
+    width: 70%;
+    line-height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+.aboutus > img{
+    vertical-align: middle;
+}
+.imgbig{
+    width: 50%;
+}
+.imglen{
+    width: 100%;
+}
+.aboutus img{
+    width: 100%;
+}
+.header_list{
+    display: none;
+}
+@media(min-width: 768px)and (max-width:991px){
+    .shop{
+        display: inline-block;
+        width: 100%;
+    }
+    .information{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .img{
+        width:80%;
+        margin:0 auto;
+    }
+    .shop_in{
+        width: 48%;
+        margin:1%;
+        height: 200px;
+        padding: 20px;
+    }
+    .aboutus_map{
+        height: 350px;
+    }
+    .txt{
+        display: block;
+        background-color: rgba(255,255,255,.8);
+    }
+    .bg > img{
+        opacity: 0;
+        position: absolute;
+     }
+     .inside{
+         width: 100%;
+         position: relative;
+         overflow: visible;
+         display: flex;
+         flex-wrap: wrap;
+     }
+     .aboutus{
+         float: none;
+         flex: 0 1 50%;
+     }
+}
+@media(min-width: 576px)and (max-width:767px){
+    .shop{
+        display: inline-block;
+        width: 100%;
+    }
+    .information{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .img{
+        width:90%;
+        margin:0 auto;
+    }
+    .img img{
+        width:100%;
+    }
+    .shop_in{
+        width: 48%;
+        margin:1%;
+        height: 200px;
+        padding: 20px;
+        padding-top: 40px;
+    }
+    .aboutus_map{
+        height: 400px;
+    }
+    .txt{
+        display: block;
+        background-color: rgba(255,255,255,.8);
+    }
+    .bg > img{
+       opacity: 0;
+       position: absolute;
+    }
+    .inside{
+        width: 100%;
+        position: relative;
+        overflow: visible;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .aboutus{
+        float: none;
+        flex: 0 1 50%;
+        border: 1px solid white;
+    }
+}
+@media (max-width:575px){
+    .shop{
+        display: inline-block;
+        width: 100%;
+    }
+    .information{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .img{
+        width:100%;
+        margin:0 auto;
+    }
+    .img img{
+        width:100%;
+    }
+    .shop_in{
+        width: 48%;
+        margin:1%;
+        height: 200px;
+        padding: 20px;
+        padding-top: 40px;
+    }
+    .shop_in > img{
+        width: 30%;
+    }
+    .aboutus_map{
+        height: 500px;
+    }
+    .txt{
+        display: block;
+        background-color: rgba(255,255,255,.8);
+    }
+    .bg > img{
+        opacity: 0;
+        position: absolute;
+     }
+     .inside{
+         width: 100%;
+         position: relative;
+         overflow: visible;
+         display: flex;
+         flex-wrap: wrap;
+     }
+     .aboutus{
+         float: none;
+         flex: 0 1 100%;
+         border: 1px solid white;
+     }
+}

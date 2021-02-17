@@ -1,0 +1,213 @@
+@import "./common/header.css";
+@import "./common/normalize.css";
+@import "./common/footer.css";
+@import "./common/fonts.css";
+html{
+    font-size: 10px;
+}
+*{
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+.bread_crumbs{
+    margin: 20px auto 0 auto;
+    list-style: none;
+    margin-left: 20px;
+}
+.bread_crumbs li{
+    display: inline-block;
+}
+.bread_crumbs li:not(:first-child)::before{
+    content: ">";
+    margin: 0 10px;
+}
+.bread_crumbs li:not(:last-child) > a{
+    text-decoration: none;
+    color: rgb(0, 92, 223);
+}
+.content_group{
+    padding: 20px;
+}
+.content{
+    text-align: center;
+}
+.news_part{
+    width: 49%;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+.news_part img{
+    width: 100%;
+    padding:10px;
+    border-radius: 50px 0 50px 0;
+    transition: border-radius 1s;
+}
+.news_part img:hover{
+    border-radius: 0;
+}
+.news_part .txt p:last-child{
+    font-size: 2rem;
+    color: rgb(17, 50, 133);
+    transition: 0.5s;
+    font-weight: 500;
+}
+.news_part .txt p:last-child:hover{
+    color: rgb(46, 169, 223);
+}
+.news_part .txt p span{
+    color: rgba(0, 0, 0, .8);
+    margin-left: 5px;
+}
+.active{
+    background-color: #fff;
+}
+.content{
+    display: none;
+}
+#content1{
+    display: block;
+}
+.tab_group{
+    text-align: center;
+}
+.tab_group li{
+    display: inline-block;
+    padding: 7px 30px 0 30px;
+    /* border: 1px solid rgba(245,150,170,.5);
+    border-radius: 5px;
+    background-color: #fff; */
+    cursor: pointer; 
+}
+.tab_group li:hover{
+    background: -webkit-linear-gradient(top, rgba(245,150,170,.7) 0%,rgba(255,255,255,0) 100%);
+}
+.tab_group li.active{ 
+    background: -webkit-linear-gradient(top, rgba(245,150,170,.7) 0%,rgba(255,255,255,0) 100%);
+}
+.select-group{
+    width: 70%;
+    height: 50px;
+    border: 1px solid rgba(245, 140, 150,1);
+    border-radius: 10px;
+    margin: 10px auto;
+    display: none;
+    background-color: white;
+}
+.select-group:focus{
+    outline: none;
+}
+.panel-group{
+    width: 90%;
+    margin: 20px auto;
+}
+.news_page{
+    list-style: none;
+    margin-top: 30px;
+    font-size: 0;
+}
+.news_page li{
+    padding: 10px;
+    background-color: #fff;
+    display: inline-block;
+    border-collapse: collapse;
+}
+.news_page li:hover{
+    background: -webkit-linear-gradient(bottom, rgba(245,150,170,.7) 0%,rgba(255,255,255,0) 100%);
+}
+.news_page li > a{
+    text-decoration: none;
+    color : black;
+}
+.news_page li:first-child{
+    border-radius: 5px 0 0 5px;
+}
+.news_page li:last-child{
+    border-radius: 0 5px 5px 0;
+}
+.news_page li.-on{
+    background: -webkit-linear-gradient(bottom, rgba(245,150,170,.7) 0%,rgba(255,255,255,0) 100%);
+}
+/* .outerdiv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+.innerdiv{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border: 1px solid red;
+    
+    cursor: zoom-out;
+    overflow: auto;
+} */
+@media(min-width: 768px)and (max-width:991px){
+    .news_part{
+        width: 100%;
+    }
+    .news_part .txt p:last-child{
+        font-size: 2rem;
+        color: rgb(15, 37, 64);;
+    }
+    .news_part img{
+        border-radius: 0px;
+        padding: 0;
+    }
+    .news_page li{
+        padding: 13px 20px 10px 20px;
+    }
+}
+@media(min-width: 576px)and (max-width:767px){
+    .content_group{
+        padding: 0px;
+    }
+    .news_part{
+        width: 100%;
+    }
+    .news_part img{
+        border-radius: 0px;
+    }
+    .select-group{
+        display: block;
+    }
+    .tab_group{
+        display: none;
+    }
+    .news_page li{
+        padding: 13px 20px 10px 20px;
+    }
+}
+@media (max-width:575px){
+    .content_group{
+        padding: 0px;
+    }
+    .select-group{
+        display: block;
+        margin: 20px auto;
+    }
+    .tab_group{
+        display: none;
+    }
+    .news_part{
+        width: 100%;
+    }
+    .news_part .txt p:last-child{
+        font-size: 2rem;
+        color: rgb(15, 37, 64);;
+    }
+    .news_part img{
+        border-radius: 0px;
+        padding: 0;
+    }
+    .news_page li{
+        padding: 13px 20px 10px 20px;
+    }
+}

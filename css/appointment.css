@@ -1,0 +1,210 @@
+@import "./common/header.css";
+@import "./common/normalize.css";
+@import "./common/footer.css";
+@import "./common/fonts.css";
+html{
+    font-size: 10px;
+}
+*{
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+.bread_crumbs{
+    margin: 20px auto 0 auto;
+    list-style: none;
+    margin-left: 20px;
+}
+.bread_crumbs li{
+    display: inline-block;
+}
+.bread_crumbs li:not(:first-child)::before{
+    content: ">";
+    margin: 0 10px;
+}
+.bread_crumbs li:not(:last-child) > a{
+    text-decoration: none;
+    color: rgb(0, 92, 223);
+}
+.title{
+    width: 100%;
+    text-align: center;
+    font-family: "formal","chi";
+    margin: 20px 0;
+}
+.title span{
+    font-size: 3rem;
+}
+.title p{
+    color: rgba(145,152,159,1);
+}
+.main_bg{
+    background-image: url(../images/content_us.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1000px;
+    border: 1px solid white;
+    position: relative;
+}
+.form_list{
+    line-height: 50px;
+    width: 50%;
+    position: absolute;
+    top: 100px;
+    right: 15%;
+    padding: 30px;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 20px;
+}
+/* .form_list select:focus, .form_list input:focus, .form_list textarea:focus{
+    background-color: rgba(245,150,170,.2);
+} */
+.form_list span{
+    font-size: 1.3rem;
+    color: rgb(0,92,175);
+}
+.form_list input:focus, .form_list textarea:focus{
+    outline: none;
+}
+.form_list input[type="email"]{
+    margin-left: 23px;
+    height: 30px;
+}
+.form_list input[type="text"]{
+    margin-left: 26px;
+    height: 30px;
+}
+.form_list textarea{
+    font-size: 1.4rem;
+    padding: 10px;
+    resize: none;
+    width: 95%;
+}
+.form_list input[type="button"]{
+    margin: 10px 0;
+    height: 35px;
+    width: 110px;
+    padding: 9px 20px;
+    color: white;
+    border: 1px solid rgb(46, 169, 223);
+    background-color: rgb(46, 169, 223);
+    transition: color 0.5s;
+}
+.form_list input[type="button"]:hover{
+    background-color: white;
+    border: 2px solid rgb(46, 169, 223);
+    color: rgb(46, 169, 223);
+}
+.outerdiv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+}
+.innerdiv{
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding:20px;
+}
+#determine{
+    margin: 10px 0;
+    height: 35px;
+    width: 110px;
+    padding: 9px 20px;
+    color: white;
+    border: 1px solid rgb(46, 169, 223);
+    background-color: rgb(46, 169, 223);
+    transition: color 0.5s;
+}
+#determine:hover{
+    background-color: white;
+    border: 2px solid rgb(46, 169, 223);
+    color: rgb(46, 169, 223);
+}
+#app_shop{
+    margin-left: 50px;
+}
+input[type="date"]{
+    margin-left: 68px;
+}
+#app_people{
+    margin-left: 24px;
+}
+#app_time{
+    position: relative;
+    top: 2px;
+}
+#app_people{
+    width: 126px;
+}
+@media(min-width: 768px)and (max-width:991px){
+    .form_list{
+        width: 80%;
+        position: static;
+        padding: 30px;
+        margin: 0 auto;
+        line-height: 60px;
+    }
+    .form_list input[type="button"]{
+        width: 200px;
+    }
+}
+@media(min-width: 576px)and (max-width:767px){
+    .form_list{
+        width: 90%;
+        position: static;
+        padding: 30px;
+        margin: 0 auto;
+        line-height: 65px;
+    }
+    .form_list input[type="button"]{
+        width: 40%;
+    }
+}
+@media (max-width:575px){
+    .form_list{
+        width: 100%;
+        position: static;
+        padding: 30px;
+        margin: 0;
+        border-radius: 0;
+        line-height: 40px;
+        text-align: center;
+    }
+    .form_list label{
+        display: block;
+        text-align: left;
+    }
+    .form_list input[type="text"], .form_list input[type="email"], .form_list input[type="date"]{
+        margin: 0px;
+        width: 85%;
+        height: 50px;
+    }
+    .form_list input[type="button"]{
+        width: 85%;
+    }
+    #app_shop, #app_people, #app_time, #app_class{
+        margin: 0;
+        width: 85%;
+        height: 50px;
+    }
+    .main_bg{
+        overflow: auto;
+    }
+    .form_list textarea {
+        width: 85%;
+    }
+}
